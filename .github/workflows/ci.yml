@@ -8,12 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup python
-        uses: actions/setup-python@v5
-        with:
-          architecture: x64
-          python-version: "3.13"
-
       - name: Setup Java 17 required by Gradle
         uses: actions/setup-java@v4
         with:
@@ -53,6 +47,7 @@ jobs:
             python3-virtualenv \
             python3-venv \
             python3-setuptools \
+            python3-distutils \
             python3-distutils-extra \
             cython3 \
             sudo \
