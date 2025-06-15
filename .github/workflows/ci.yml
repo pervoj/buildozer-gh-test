@@ -47,14 +47,13 @@ jobs:
             python3-virtualenv \
             python3-venv \
             python3-setuptools \
-            python3-distutils \
             python3-distutils-extra \
             cython3 \
             sudo \
             unzip \
             wget \
             zip
-          python3 -m pip install --upgrade buildozer
+          python3 -m pip install --upgrade setuptools buildozer
         shell: bash
 
       - name: Install requirements in requirements.txt if it exists
