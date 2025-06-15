@@ -72,11 +72,11 @@ jobs:
         shell: bash
 
       - name: Build APK
-        run: buildozer -v init
+        run: buildozer -v android debug
         shell: bash
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: package
-          path: ./buildozer.spec
+          path: ./bin/*.apk
